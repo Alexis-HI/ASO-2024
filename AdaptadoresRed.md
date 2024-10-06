@@ -18,7 +18,7 @@ El adaptador puente conecta a la máquina virtual directamente a la red física 
 
 
 ## Red Interna
-La función principal de la red interna es ofrecerle a una serie de equipos comunicación total entre ellos estando aislados de la red externa para no recibir interferencias.
+La función principal de la red interna es ofrecerle a una serie de equipos comunicación total entre ellos, estando aislados de la red externa para no recibir interferencias.
 
   - **Ventaja Principal** = Muy bueno para operar en un entorno seguro de atacantes del exterior.
   - **Escenario de Uso** = Se puede usar este adaptador para simular ataques de hacking entre máquinas y para crear entornos de empresas, como dominios, de prueba sin que haya interferencias del exterior.
