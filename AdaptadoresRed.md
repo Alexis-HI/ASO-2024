@@ -41,5 +41,5 @@ El controlador genérico permite a las máquinas virtuales utilizar controladore
 ## Red NAT
 Este adaptador es extremadamente similar al NAT. La única diferencia entre ellos es que la red Nat permite la comunicación entre máquinas virtuales.
 
-  - **Ventaja Principal** = Permite la oomunicación directa entre máquinas virtuales.
+  - **Ventaja Principal** = Permite la comunicación directa entre máquinas virtuales.
   - **Escenario de Uso** = En el desarrollo de aplicaciones web necesitaremos probar el funcionamiento de la página, por lo que configurando una NAT, podremos salir al exterior para probar la página de manera segura.
