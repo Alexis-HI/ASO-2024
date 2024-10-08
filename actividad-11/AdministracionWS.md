@@ -12,7 +12,7 @@
 
 
 
-4. Engadide 3 novas usuarias ao sistema: **Larisa Shepitko**,** Bibi Andersson** e **Monica Vitti**. Asignádelles un contrasinal e comprobade que poden iniciar sesión.
+4. Engadide 3 novas usuarias ao sistema: **Larisa Shepitko**,**Bibi Andersson** e **Monica Vitti**. Asignádelles un contrasinal e comprobade que poden iniciar sesión.
 
 
 
