@@ -1,6 +1,6 @@
 # Actividade 1.1 – Administración básica de WS 2022
 
-14. [Ejercicio 14](#Disminuide-a-prioridade-do-**Bloc-de-Notas**-a-**Por-Debaixo-do-Normal**-.)
+14. [Ejercicio 14](#14.-Disminuide-a-prioridade-do-**Bloc-de-Notas**-a-**Por-Debaixo-do-Normal**-.)
 
 1. Instalade Windows Server 2022 nunha VM de VirtualBox. Procurade seguir as convencións discutidas na clase en base ao documento **"Xestión de VM con VirtualBox"**. 
 
