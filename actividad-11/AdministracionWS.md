@@ -6,7 +6,7 @@
 
 2. Eliminade a necesidade de utilizar **CTRL+ALT+DEL** para poder introducir as credenciais e acceder ao sistema. 
 
-![Captura 1 ejercicio 2](/home/usuario/Documentos/img/2.png)
+![Captura 1 ejercicio 2](https://github.com/Alexis-HI/ASO-2024/tree/main/actividad-11/img/2.png)
 
 3. Modificade as directivas de contrasinais establecendo unha vixencia mínima de 15 días e máxima de 60.
 
