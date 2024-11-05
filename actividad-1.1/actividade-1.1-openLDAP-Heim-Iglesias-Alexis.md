@@ -116,9 +116,9 @@
 
 ###  Para la creación de los usuario será exactamente igual que los grupos. Únicamente cambiará la sintaxis del archivo.
 
-![Cap39](img/39.png)
+![Cap39](img/40.png)
 
 ### Lo subimos de la misma forma que los grupos.
 
-![Cap40](img/40.png)
+![Cap40](img/41.png)
 
