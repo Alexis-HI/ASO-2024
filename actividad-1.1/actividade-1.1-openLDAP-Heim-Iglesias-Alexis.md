@@ -1,4 +1,4 @@
-#Actividad 1.1– OpenLDAP desde la terminal
+# Actividad 1.1– OpenLDAP desde la terminal
 
 ## 0. Instalación, apt update, apt upgrade y configurar en red interna.
 
