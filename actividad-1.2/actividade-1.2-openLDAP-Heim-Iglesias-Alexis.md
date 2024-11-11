@@ -41,66 +41,65 @@
 
 ![Cap10](img/10.PNG)
 ![Cap11](img/11.PNG)
-![Cap12](img/12.PNG)
 
 ## 4 - Crear UO nueva.
 
 ### Creamos las unidades necesarias simplemente indicando el directorio padre y el nombre de la UO.
 
-![Cap13](img/13.png)
-![Cap14](img/14.PNG)
+![Cap12](img/12.png)
+![Cap13](img/13.PNG)
 
 ### Crearemos de la misma forma el resto de unidades organizativas.
 
-![Cap15](img/15.PNG)
+![Cap14](img/14.PNG)
 
 ### El resultado sería algo así.
 
-![Cap16](img/16.PNG)
+![Cap15](img/15.PNG)
 
 ## 5 - Crear grupos nuevos.
 
 ### La mecánica de creación de grupos será muy similar a la de crear unidades organizativas.
 
+![Cap16](img/16.PNG)
 ![Cap17](img/17.PNG)
-![Cap18](img/18.PNG)
 
 ### El resultado final de la inclusión de grupos sería el siguiente.
 
+![Cap18](img/18.PNG)
 ![Cap19](img/19.PNG)
-![Cap20](img/20.PNG)
 
 ## 5 - Crear usuarios nuevos.
 
 ### Crearemos un par de usuarios de ejemplo. Dentro del apartado de creación iremos a la opción Unix y ahí indicaremos los datos del usuario, su uid y su grupo.
 
-![Cap21](img/21.PNG)
+![Cap20](img/20.PNG)
 
 ### Quedando el resultado de la siguiente forma.
 
+![Cap21](img/21.PNG)
 ![Cap22](img/22.PNG)
-![Cap23](img/23.PNG)
 
 ## 6 - Instalación y configuración de phpLDAPadmin.
 
 ### Intalamos el programa.
 
-![Cap24](img/24.PNG)
+![Cap23](img/23.PNG)
 
 ### Ahora configuramos su archivo .conf para indicarle nuestro dominio.
 
-![Cap25](img/25.PNG)
+![Cap24](img/24.PNG)
 
 ### Nos conectaremos desde el cliente y le daremos clic en el botón “conectar”.
 
+![Cap25](img/25.PNG)
 ![Cap26](img/26.PNG)
 ![Cap27](img/27.PNG)
-![Cap28](img/28.PNG)
 
 ## 7 - Crear una UO nueva.
 
 ### Iremos al lugar indicado en la captura y le daremos clic al botón de crear nuevo objeto y seleccionaremos la opción “Genérico: Unidad Organizativa”.
 
+![Cap28](img/28.PNG)
 ![Cap29](img/29.PNG)
 ![Cap30](img/30.PNG)
-![Cap31](img/31.PNG)
