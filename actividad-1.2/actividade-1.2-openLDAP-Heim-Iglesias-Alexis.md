@@ -1,4 +1,4 @@
-#Actividad 1.2 - LDAP Account Manager e `phpLDAPAdmin` 
+# Actividad 1.2 - LDAP Account Manager e `phpLDAPAdmin` 
 
 ## 1 - Instalación de las dependencias necesarias.
 
