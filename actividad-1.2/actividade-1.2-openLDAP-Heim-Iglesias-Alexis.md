@@ -46,8 +46,8 @@
 
 ### Creamos las unidades necesarias simplemente indicando el directorio padre y el nombre de la UO.
 
-![Cap12](img/12.PNG)
-![Cap13](img/13.png)
+![Cap12](img/12.png)
+![Cap13](img/13.PNG)
 
 ### Crearemos de la misma forma el resto de unidades organizativas.
 
