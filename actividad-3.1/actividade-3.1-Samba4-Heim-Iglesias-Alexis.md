@@ -9,12 +9,12 @@
 ### Ya terminada la instalación, accederemos a la máquina servidor mediante SSH. Pero para ello, instalaremos el SSH en el servidor y lo habilitaremos con los siguientes comandos.
 
 `~$ sudo apt install ssh –y`
-<~$ sudo systemctl start ssh>
-<~$ sudo systemctl status ssh>
+`~$ sudo systemctl start ssh`
+`~$ sudo systemctl status ssh`
 
 ### Procederemos a conectarnos a la máquina servidor desde nuestro equipo local (PowerShell) con el siguiente comando.
 
-<~$ssh ahidc@192.168.1.167>
+`~$ssh ahidc@192.168.1.167`
 
 ### A partir de aquí todos los comandos serán ejecutados desde el equipo local. Configuraremos un archivo .yaml para establecer una IP fija en nuestro servidor con los siguientes comandos.
 
