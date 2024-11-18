@@ -104,6 +104,7 @@
 
 ![Cap10](img/10.png)
 ![Cap11](img/11.png)
+![Cap12](img/12.png)
 
 ### Detendremos los servicios smbd, nmbd y winbind dado que el Samba no los requiere para trabajar correctamente.
 
@@ -121,13 +122,13 @@
 
 `~$ sudo samba-tool domain provision`
 
-![Cap12](img/12.png)
+![Cap13](img/13.png)
 
 ### Esto generará un nuevo smb.conf
 
 `~$ sudo cat /etc/samba/smb.conf`
 
-![Cap13](img/13.png)
+![Cap14](img/14.png)
 
 ### Es posible que la primera vez salga un error. Para solventarlo será tan simple como borrar el smb.conf ya existente y lanzar de nuevo el comando de configuración.
 
