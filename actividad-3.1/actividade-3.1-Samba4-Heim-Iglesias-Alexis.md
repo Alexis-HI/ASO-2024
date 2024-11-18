@@ -227,3 +227,67 @@
 `~$ sudo samba-tool computer list`
 
 ![Cap22](img/22.png)
+
+## 6 - Implementación del SNAT con NFTABLES
+
+### Habilitaremos el IP forward con los siguientes comandos:
+
+`~$ sudo cat /proc/sys/net/ipv4/ip_forward`
+
+`~$ sudo su -`
+
+`~$ echo 1 > /proc/sys/net/ipv4/ip_forward`
+
+`~$exit`
+
+`~$ sudo cat /proc/sys/net/ipv4/ip_forward`
+
+![Cap24](img/24.png)
+
+### Para hacer permanente este cambio modificaremos lo siguiente:
+
+`~$ sudo nano /etc/sysctl.conf`
+
+![Cap25](img/25.png)
+
+### Instalamos el NFtables
+
+`~$ sudo apt install nftables`
+
+![Cap26](img/26.png)
+
+### Crearemos una tabla y una cadena que determinará cómo y dónde se aplican las reglas de filtrado o traducción de paquetes.
+	
+`~$ sudo nft add table nat`
+
+`~$ sudo nft add chain nat postrouting { type nat hook postrouting priority 100 \; }`
+
+`~$ sudo nft list chains`
+
+![Cap27](img/27.png)
+
+### Creamos una nueva regla para la tabla nat, específicamente en la cadena postrouting. 
+
+`~$ sudo nft add rule ip nat postrouting oifname "enp0s3" ip saddr 192.168.17.0/24 counter masquerade`
+
+`~$ sudo nft list table nat`
+
+![Cap28](img/28.png)
+
+### Para hacer estos cambios permanentes haremos las siguientes modificaciones:
+
+`~$ sudo su -`
+
+`~$ nft list ruleset > /etc/nftables.conf`
+
+`~$ exit`
+
+### Ahora solo nos quedará iniciar el servicio y verificar si está levantado.
+
+`~$ sudo systemctl enable nftables`
+
+`~$ sudo systemctl restart nftables`
+
+`~$ sudo systemctl status nftables`
+
+![Cap29](img/29.png)
