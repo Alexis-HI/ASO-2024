@@ -4,7 +4,11 @@
 
 ### Configuraremos 3 tarjetas de red en la máquina virtual. Una en modo “NAT”, para conectarse a los servicios de internet. Una en modo “Red Interna”, para que el servidor y los clientes se puedan comunicar entre sí. Una en modo “Puente” para poder usar la máquina server desde la máquina local a través de SSH.
 
+![Cap1](img/1.png)
+
 ### Configuración del perfil de usuario del servidor en la instalación.
+
+![Cap2](img/2.png)
 
 ### Ya terminada la instalación, accederemos a la máquina servidor mediante SSH. Pero para ello, instalaremos el SSH en el servidor y lo habilitaremos con los siguientes comandos.
 
@@ -14,17 +18,25 @@
 
 `~$ sudo systemctl status ssh`
 
+![Cap3](img/3.png)
+
 ### Procederemos a conectarnos a la máquina servidor desde nuestro equipo local (PowerShell) con el siguiente comando.
 
 `~$ssh ahidc@192.168.1.167`
 
-### A partir de aquí todos los comandos serán ejecutados desde el equipo local. Configuraremos un archivo .yaml para establecer una IP fija en nuestro servidor con los siguientes comandos.
+### A partir de aquí todos los comandos serán ejecutados desde el equipo local. 
+
+![Cap4](img/4.png)
+
+### Configuraremos un archivo .yaml para establecer una IP fija en nuestro servidor con los siguientes comandos.
 
 `~$ sudo nano /etc/netplan/01-netcgf.yaml`
 
 ### El archivo debe quedar tal que así:
 
 `~$ sudo cat /etc/netplan/01-netcgf.yaml`
+
+![Cap5](img/5.png)
 
 ### Aplicaremos los permisos pertinentes al archivo .yaml.
 
@@ -35,6 +47,8 @@
 `~$ sudo netplan apply`
 
 `~$ ip a`
+
+![Cap6](img/6.png)
 
 ### 10.0.2.15/24 = Tarjeta NAT para conectarse a internet.
 ### 192.168.17.8/24 = Red Interna para conectarse con los clientes.
@@ -52,9 +66,13 @@
 
 `~$ sudo cat /etc/hosts`
 
+![Cap7](img/7.png)
+
 ### Verificaremos que el cambio se ha hecho correctamente haciendo un ping a nuestro servidor Samba.
 
 `~$ ping dc.ubuntuserverdc.local`
+
+![Cap8](img/8.png)
 
 ### Desactivaremos el servicio system-resolved y eliminaremos su enlace simbólico. Esto lo haremos por una incompatibilidad con el servidor Samba.
 
@@ -65,6 +83,8 @@
 ### Ya con el resolv.conf eliminado crearemos uno de cero para hacerlo compatible con el Samba. El resultado del archivo será el siguiente:
 
 `~$ sudo nano /etc/resolv.conf`
+
+![Cap9](img/9.png)
 
 ### Ahora solo quedará hacer inmutable el archivo para que este no se pueda modificar.
 
@@ -82,6 +102,9 @@
 
 `~$ DC.UBUNTUSERVERDC.LOCAL`
 
+![Cap10](img/10.png)
+![Cap11](img/11.png)
+
 ### Detendremos los servicios smbd, nmbd y winbind dado que el Samba no los requiere para trabajar correctamente.
 
 `~$ sudo systemctl disable --now smbd nmbd winbind`
@@ -98,9 +121,13 @@
 
 `~$ sudo samba-tool domain provision`
 
+![Cap12](img/12.png)
+
 ### Esto generará un nuevo smb.conf
 
 `~$ sudo cat /etc/samba/smb.conf`
+
+![Cap13](img/13.png)
 
 ### Es posible que la primera vez salga un error. Para solventarlo será tan simple como borrar el smb.conf ya existente y lanzar de nuevo el comando de configuración.
 
@@ -118,6 +145,8 @@
 
 `~$ sudo systemctl status samba-ad-dc`
 
+![Cap14](img/14.png)
+
 ## 4 - Configuración de sincronización del tiempo.
 
 ### Samba Active Directory depende del protocolo Kerberos, y el protocolo Kerberos requiere que los tiempos del servidor AD y de la estación de trabajo estén sincronizados. Para garantizar una sincronización de tiempo adecuada, también deberemos configurar un servidor de Protocolo de tiempo de red (NTP) en Samba.
@@ -134,10 +163,14 @@
 
 `~$ sudo cat /etc/chrony/chrony.conf`
 
+![Cap15](img/15.png)
+
 ### Reiniciamos el servicio chronyd.
 
 `~$ sudo systemctl restart chronyd`
 `~$ sudo systemctl status chronyd`
+
+![Cap16](img/16.png)
 
 ### Haremos las siguientes comprobaciones para saber si todo está correcto Nombres de dominio.
 
@@ -154,13 +187,19 @@
 
 `~$ smbclient -L clockwork.local -N`
 
+![Cap17](img/17.png)
+
 ### Comprobamos que se puede iniciar sesión en el dc.
 
 `~$ sudo smbclient //localhost/netlogon -U 'administrator'`
 
+![Cap18](img/18.png)
+
 ### Verificar funcionamiento WINDOWS AD DC 2008
 
 `~$ sudo samba-tool domain level show`
+
+![Cap19](img/19.png)
 
 ### 5 - Administración de usuarios y grupos.
 
@@ -174,10 +213,16 @@
 
 `~$ samba-tool group list`
 
+![Cap20](img/20.png)
+
 ### Añadiremos al usuario ahiUbuntuClient al grupo ubuntu.
 
 `~$ samba-tool group addmembers ubuntu ahiUbuntuClient`
 
+![Cap21](img/21.png)
+
 ### Listaremos las máquinas que están actualmente conectadas al servidor.
 
 `~$ sudo samba-tool computer list`
+
+![Cap22](img/22.png)
