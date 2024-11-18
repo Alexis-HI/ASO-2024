@@ -8,7 +8,7 @@
 
 ### Ya terminada la instalación, accederemos a la máquina servidor mediante SSH. Pero para ello, instalaremos el SSH en el servidor y lo habilitaremos con los siguientes comandos.
 
-<~$ sudo apt install ssh –y>
+`~$ sudo apt install ssh –y`
 <~$ sudo systemctl start ssh>
 <~$ sudo systemctl status ssh>
 
