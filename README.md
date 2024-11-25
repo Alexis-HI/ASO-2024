@@ -9,3 +9,5 @@
 [4 - LDAP Account Manager y phpLDAPadmin](https://github.com/Alexis-HI/ASO-2024/blob/main/actividad-1.2/actividade-1.2-openLDAP-Heim-Iglesias-Alexis.md)
 
 [5 - Samba 4 AD en Ubuntu Server](https://github.com/Alexis-HI/ASO-2024/blob/main/actividad-3.1/actividade-3.1-Samba4-Heim-Iglesias-Alexis.md)
+
+[6 - Recursos compartidos en Samba 4 AD con Ubuntu Server](https://github.com/Alexis-HI/ASO-2024/blob/main/actividad-3.2/actividade-3.2-RecursosCompartidosSamba4-Heim-Iglesias-Alexis.md)
