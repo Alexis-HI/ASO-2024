@@ -11,3 +11,5 @@
 [5 - Samba 4 AD en Ubuntu Server](https://github.com/Alexis-HI/ASO-2024/blob/main/actividad-3.1/actividade-3.1-Samba4-Heim-Iglesias-Alexis.md)
 
 [6 - Recursos compartidos en Samba 4 AD con Ubuntu Server](https://github.com/Alexis-HI/ASO-2024/blob/main/actividad-3.2/actividade-3.2-RecursosCompartidosSamba4-Heim-Iglesias-Alexis.md)
+
+[7 - Integración de equipos Windows en Samba AD con Ubuntu Server](https://github.com/Alexis-HI/ASO-2024/blob/main/actividad-6.1/actividade-6.1-Integraci%C3%B3nWindowsSamba-Heim-Iglesias-Alexis.md)
